@@ -54,10 +54,11 @@ footer{color:var(--muted);font-size:14px;text-align:center;padding:30px 0 40px;f
 </style>
 <!-- tracking: fill the IDs below (META_PIXEL_ID / OPENAI_DATA_SOURCE) — until then the loaders are skipped -->
 <script>
-window.TRK={meta:"2096986014415457",openai:""};
+window.TRK={meta:"2096986014415457",openai:"EsMUDS8M1rASqqkWfB3HbR"};
 (function(){
   if(TRK.meta){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',TRK.meta);fbq('track','PageView');}
-  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(!a)return;var src=(location.search.match(/utm_source=([^&]+)/)||[])[1]||'direct';try{if(window.fbq)fbq('track','Lead',{content_name:'whatsapp_click',source:src});}catch(x){}try{if(window.openaiq)openaiq('track','Lead',{source:src});}catch(x){}try{if(window.gtag)gtag('event','whatsapp_click',{source:src});}catch(x){}},true);
+  if(TRK.openai){!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:TRK.openai});}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(!a)return;var src=(location.search.match(/utm_source=([^&]+)/)||[])[1]||'direct';try{if(window.fbq)fbq('track','Lead',{content_name:'whatsapp_click',source:src});}catch(x){}try{if(window.oaiq)oaiq('measure','lead_created',{type:'customer_action',source:src});}catch(x){}try{if(window.gtag)gtag('event','whatsapp_click',{source:src});}catch(x){}},true);
 })();
 </script>
 </head>
