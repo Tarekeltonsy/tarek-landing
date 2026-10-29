@@ -446,7 +446,15 @@ function setLang(l){
 })();
 
 (function(){
-  const SRC = {chatgpt:['ChatGPT','ChatGPT'], google:['جوجل','Google'], facebook:['فيسبوك','Facebook'], fb:['فيسبوك','Facebook'], instagram:['إنستجرام','Instagram'], ig:['إنستجرام','Instagram'], linkedin:['لينكدإن','LinkedIn'], meta:['فيسبوك','Facebook']};
+  const SRC = {
+    chatgpt:['ChatGPT','ChatGPT'],
+    meta:['ميتا','Meta'], meta_personal:['ميتا (صفحة د.طارق)','Meta (Dr.Tarek)'],
+    facebook:['فيسبوك','Facebook'], fb:['فيسبوك','Facebook'],
+    instagram:['إنستجرام','Instagram'], ig:['إنستجرام','Instagram'],
+    google:['جوجل','Google'], gbp:['جوجل بيزنس','Google Business'], google_business:['جوجل بيزنس','Google Business'],
+    tiktok:['تيك توك','TikTok'], linkedin:['لينكدإن','LinkedIn'],
+    youtube:['يوتيوب','YouTube'], yt:['يوتيوب','YouTube']
+  };
   const q = new URLSearchParams(location.search);
   let src = (q.get('utm_source')||'').toLowerCase();
   try { if (src) sessionStorage.setItem('tarek-src', src); else src = sessionStorage.getItem('tarek-src') || ''; } catch(e) {}
