@@ -8,5 +8,9 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://tarek.one-academy.net/blog/dipifr-instructor-egypt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tarek.one-academy.net/blog/dipifr-instructor-egypt/#en"/>
   </url>
+  <url><loc>https://tarek.one-academy.net/blog/dipifr-last-4-weeks/</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tarek.one-academy.net/blog/dipifr-last-4-weeks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tarek.one-academy.net/blog/dipifr-last-4-weeks/#en"/>
+  </url>
   <url><loc>https://tarek.one-academy.net/results/</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
