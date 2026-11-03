@@ -484,6 +484,23 @@ function setLang(l){
   };
   window.applyWaText();
 })();
+
+/* ---- Sales A/B routing: split WhatsApp 50/50 between Asmaa & Aya, sticky per visitor ---- */
+/* To send ALL traffic to the winner later: reduce REPS to a single entry and redeploy. */
+(function(){
+  var REPS=[{rep:'asmaa',num:'201050906103'},{rep:'aya',num:'201024105353'}];
+  var REP,NUM,i;
+  try{var s=localStorage.getItem('tarek-rep');for(i=0;i<REPS.length;i++){if(REPS[i].rep===s){REP=REPS[i].rep;NUM=REPS[i].num;break;}}}catch(e){}
+  if(!REP){var p=REPS[Math.floor(Math.random()*REPS.length)];REP=p.rep;NUM=p.num;try{localStorage.setItem('tarek-rep',REP);}catch(e){}}
+  window.__rep=REP;
+  var orig=window.applyWaText;
+  window.applyWaText=function(){
+    if(orig)orig();
+    document.querySelectorAll('a[href*="wa.me/"]').forEach(function(a){try{var u=new URL(a.href);u.pathname='/'+NUM;a.href=u.toString();}catch(e){}});
+  };
+  window.applyWaText();
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(!a)return;try{if(window.fbq)fbq('trackCustom','WhatsAppRep',{rep:REP});}catch(x){}},true);
+})();
 </script>
 
 </body>
