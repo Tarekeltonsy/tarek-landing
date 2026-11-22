@@ -17,4 +17,9 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tarek.one-academy.net/blog/dipifr-why-study/#en"/>
   </url>
   <url><loc>https://tarek.one-academy.net/results/</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tarek.one-academy.net/blog/ifrs15-five-step-model/</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tarek.one-academy.net/blog/ifrs15-five-step-model/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tarek.one-academy.net/blog/ifrs15-five-step-model/#en"/>
+  </url>
+  <url><loc>https://tarek.one-academy.net/blog/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
