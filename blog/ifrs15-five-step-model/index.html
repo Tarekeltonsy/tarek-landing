@@ -87,6 +87,9 @@ window.TRK={meta:"2096986014415457",openai:"EsMUDS8M1rASqqkWfB3HbR"};
   if(TRK.openai){!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:TRK.openai});}
   document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(!a)return;var src=(location.search.match(/utm_source=([^&]+)/)||[])[1]||'direct';try{if(window.fbq)fbq('track','Lead',{content_name:'whatsapp_click',source:src});}catch(x){}try{if(window.oaiq)oaiq('measure','lead_created',{type:'customer_action'},{event_id:'wa_'+Date.now()+'_'+Math.random().toString(36).slice(2,8)});}catch(x){}try{if(window.gtag)gtag('event','whatsapp_click',{source:src});}catch(x){}},true);
 })();
+
+/* Metricool web tracking */
+(function(){function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){try{beTracker.t({hash:"37c1e0338dd74dedaec018aa0d12059c"})}catch(e){}});})();
 </script>
 </head>
 <body>
